@@ -1,0 +1,17 @@
+.root {
+  flex-grow: 1;
+}
+
+.containerInfo {
+  justify-content: space-between;
+  margin-top: 20%;
+}
+
+.containerTendencia {
+  justify-content: space-between;
+  margin-top: 10%;
+}
+
+.list-unstyled {
+  text-align: center;
+}

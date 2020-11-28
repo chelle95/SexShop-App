@@ -1,0 +1,21 @@
+.root {
+  max-width: 400px;
+  flex-grow: 1;
+  position: relative;
+}
+
+.slide {
+  padding: 15;
+  max-height: 600px;
+  color: "#fff";
+}
+
+.slideUno,
+.slideDos,
+.slideTres {
+  background-image: url(https://image.freepik.com/psd-gratis/retrato-perrito-lindo-golden-retriever-que-lleva-sombrero-papa-noel_53876-73990.jpg);
+  background-repeat: no-repeat;
+  max-height: auto;
+  width: 100%;
+  height: 500px;
+}
