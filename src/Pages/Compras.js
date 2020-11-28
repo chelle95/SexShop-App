@@ -52,7 +52,7 @@ const Compras = () => {
                   color="textSecondary"
                   gutterBottom
                 >
-                  CARDDDD DE ROOOPAA! probando
+                  CARDDDD DE ROOOPAA! probando otros cambios
                 </Typography>
               </CardContent>
             </Card>
