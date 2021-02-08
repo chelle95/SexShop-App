@@ -4,17 +4,17 @@ import DrawerFijo from "../components/Drawer/DrawerFijo";
 import { makeStyles } from "@material-ui/core/styles";
 import { Grid } from "@material-ui/core";
 
-const ParaEllas = () => {
-  const [productosEllas, setProductosEllas] = useState([]);
+const ParaEllos = () => {
+  const [productosEllos, setProductosEllos] = useState([]);
 
-  const fetchProductosEllas = async () => {
-    const response = await fetch("http://localhost:3004/productosParaEllas");
+  const fetchProductosEllos = async () => {
+    const response = await fetch("http://localhost:3004/productosParaEllos");
     const resData = await response.json();
-    setProductosEllas(await resData);
+    setProductosEllos(await resData);
   };
 
   useEffect(() => {
-    fetchProductosEllas();
+    fetchProductosEllos();
     // dependencias vacias, ejecuto la funcion anonima una sola vez.
   }, []);
 
@@ -36,7 +36,7 @@ const ParaEllas = () => {
       <div className={classes.root}>
         {" "}
         <Grid container>
-          {productosEllas.map((producto) => {
+          {productosEllos.map((producto) => {
             return (
               <Grid
                 key={producto.id}
@@ -47,10 +47,7 @@ const ParaEllas = () => {
                 xl={4}
                 className={classes.cardsVentas}
               >
-                <CardVentas
-                  producto={producto}
-                  imagenProducto={producto.imagen}
-                />
+                <CardVentas imagenProducto={producto.imagen} />
               </Grid>
             );
           })}
@@ -60,4 +57,4 @@ const ParaEllas = () => {
   );
 };
 
-export default ParaEllas;
+export default ParaEllos;

@@ -10,6 +10,7 @@ import {
 import { makeStyles } from "@material-ui/core/styles";
 import ExpandLess from "@material-ui/icons/ExpandLess";
 import ExpandMore from "@material-ui/icons/ExpandMore";
+
 const DrawerFijo = () => {
   const useStyles = makeStyles({
     drawerFijo: {
@@ -32,6 +33,7 @@ const DrawerFijo = () => {
   const handleClick = () => {
     setOpen(!open);
   };
+
   return (
     <div>
       <Drawer

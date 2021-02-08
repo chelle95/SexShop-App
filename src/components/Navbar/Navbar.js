@@ -1,5 +1,6 @@
-import React, { Fragment, useState } from "react";
+import React, { useState } from "react";
 import { withRouter } from "react-router-dom";
+import mortal from "../../images/mortal.png";
 
 import {
   AppBar,
@@ -17,11 +18,14 @@ import MenuIcon from "@material-ui/icons/Menu";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import useScrollTrigger from "@material-ui/core/useScrollTrigger";
+import { useDispatch, useSelector } from "react-redux";
+import * as loginActions from "../../store/actions/login";
 
 const useStyles = makeStyles({
   root: {
     display: "flex",
     flexGrow: 1,
+    backgroundColor: "#ab3838",
   },
   tooltipFont: {
     fontSize: "1rem",
@@ -32,6 +36,16 @@ const useStyles = makeStyles({
   button: {
     display: "flex",
   },
+  dragon: {
+    width: "40px",
+    height: "40px",
+  },
+  tabsHolder: {
+    width: "100%",
+    justifyContent: "center",
+    display: "flex",
+  },
+  //MuiTabsRoot: {},
 });
 
 function ElevationScroll(props) {
@@ -52,6 +66,17 @@ function Navbar(props) {
   const [newAnchor, setNewAnchor] = useState(null);
 
   const classes = useStyles();
+  const dispatch = useDispatch();
+
+  // importar dispatch
+  // 2 - llamar a la accion.
+
+  const salir = async () => {
+    await dispatch(loginActions.cerrarSesion());
+    localStorage.removeItem("Email");
+    localStorage.removeItem("Logueado");
+    props.history.push("/");
+  };
 
   const switchPages = (value) => {
     switch (value) {
@@ -85,7 +110,6 @@ function Navbar(props) {
   };
 
   const handleThisClick = (event) => {
-    debugger;
     setNewAnchor(event.currentTarget);
     setAccountMenu(true);
   };
@@ -95,6 +119,37 @@ function Navbar(props) {
     setAccountMenu(false);
   };
 
+  const storeLogin = useSelector((store) => store.login.logueado);
+
+  const menuDeslogueado = () => (
+    <>
+      <MenuItem
+        onClick={() => {
+          handleClose();
+          props.history.push("/Registrarse");
+        }}
+      >
+        Registrarse
+      </MenuItem>
+      <MenuItem
+        onClick={() => {
+          handleClose();
+          props.history.push("/IniciarSesion");
+        }}
+      >
+        Iniciar sesion
+      </MenuItem>
+    </>
+  );
+
+  const menuLogueado = () => (
+    <>
+      <MenuItem>Perfil</MenuItem>
+      <MenuItem>Configuracion</MenuItem>
+      <MenuItem onClick={salir}>Salir</MenuItem>
+    </>
+  );
+
   return (
     <div>
       <ElevationScroll>
@@ -103,12 +158,27 @@ function Navbar(props) {
             <IconButton onClick={toggleDrawer}>
               <MenuIcon />
             </IconButton>
-            <Tabs value={tabValue} onChange={handleChange}>
-              <Tab label="Productos" />
-              <Tab label="Envios" />
-              <Tab label="Contacto" />
-              <Tab label="Lenceria" />
-            </Tabs>
+            <IconButton>
+              <img
+                src={mortal}
+                className={classes.dragon}
+                onClick={() => {
+                  props.history.push("/");
+                }}
+              />
+            </IconButton>
+            <div className={classes.tabsHolder}>
+              <Tabs
+                className={classes.tabs}
+                value={tabValue}
+                onChange={handleChange}
+              >
+                <Tab label="Productos" />
+                <Tab label="Envios" />
+                <Tab label="Contacto" />
+                <Tab label="Lenceria" />
+              </Tabs>
+            </div>
 
             <Tooltip
               className={classes.tooltip}
@@ -130,7 +200,7 @@ function Navbar(props) {
               title="Tus compras"
             >
               <IconButton
-                onClick={(e) => {
+                onClick={() => {
                   //para cambiar paginas es esto, boluda.
                   props.history.push("/Compras");
                 }}
@@ -150,9 +220,7 @@ function Navbar(props) {
         anchorOrigin={{ vertical: "top", horizontal: "right" }}
         transformOrigin={{ vertical: "top", horizontal: "right" }}
       >
-        <MenuItem onClick={handleClose}>Profile</MenuItem>
-        <MenuItem onClick={handleClose}>My account</MenuItem>
-        <MenuItem onClick={handleClose}>Logout</MenuItem>
+        {!storeLogin ? menuDeslogueado() : menuLogueado()}
       </Menu>
     </div>
   );

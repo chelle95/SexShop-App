@@ -9,8 +9,18 @@ import {
 } from "@material-ui/core";
 import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
 import { makeStyles } from "@material-ui/core/styles";
+import * as carritoActions from "../../store/actions/carrito";
+import { useDispatch } from "react-redux";
+import { v4 as uuidv4 } from "uuid";
 
 const CardVentas = (props) => {
+  //ejecutar acciones con dispatch
+  const dispatch = useDispatch();
+
+  const sumarCarrito = async () => {
+    await dispatch(carritoActions.agregarCarrito(uuidv4(), props.producto));
+  };
+
   const useStyles = makeStyles({
     medCard: {
       maxWidth: "400px",
@@ -44,7 +54,7 @@ const CardVentas = (props) => {
         </CardActionArea>
 
         <CardActions className={classes.carrito}>
-          <Button>
+          <Button onClick={sumarCarrito}>
             <AddShoppingCartIcon />
           </Button>
         </CardActions>

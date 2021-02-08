@@ -1,0 +1,224 @@
+{
+  "productosParaEllas": [
+    {
+      "id": 1,
+      "imagen": "https://images-na.ssl-images-amazon.com/images/I/61PIHuuvcNL._AC_SX425_.jpg",
+      "nombre": "Pene largo y gigante",
+      "descripcion": "Te desgarra foerte",
+      "precio": 1500
+    },
+    {
+      "id": 2,
+      "imagen": "https://images-na.ssl-images-amazon.com/images/I/61PIHuuvcNL._AC_SX425_.jpg",
+      "nombre": "Pene largo y gigante",
+      "descripcion": "Te desgarra foerte",
+      "precio": 1500
+    },
+    {
+      "id": 3,
+      "imagen": "https://images-na.ssl-images-amazon.com/images/I/61PIHuuvcNL._AC_SX425_.jpg",
+      "nombre": "Pene largo y gigante",
+      "descripcion": "Te desgarra foerte",
+      "precio": 1500
+    },
+    {
+      "id": 4,
+      "imagen": "https://images-na.ssl-images-amazon.com/images/I/61PIHuuvcNL._AC_SX425_.jpg",
+      "nombre": "Pene largo y gigante",
+      "descripcion": "Te desgarra foerte",
+      "precio": 1500
+    },
+    {
+      "id": 5,
+      "imagen": "https://images-na.ssl-images-amazon.com/images/I/61PIHuuvcNL._AC_SX425_.jpg",
+      "nombre": "Pene largo y gigante",
+      "descripcion": "Te desgarra foerte",
+      "precio": 1500
+    },
+    {
+      "id": 6,
+      "imagen": "https://images-na.ssl-images-amazon.com/images/I/61PIHuuvcNL._AC_SX425_.jpg",
+      "nombre": "Pene largo y gigante",
+      "descripcion": "Te desgarra foerte",
+      "precio": 1500
+    },
+    {
+      "id": 7,
+      "imagen": "https://images-na.ssl-images-amazon.com/images/I/61PIHuuvcNL._AC_SX425_.jpg",
+      "nombre": "Pene largo y gigante",
+      "descripcion": "Te desgarra foerte",
+      "precio": 1500
+    }
+  ],
+  "ProductosParaEllos": [
+    {
+      "id": 1,
+      "imagen": "https://images-na.ssl-images-amazon.com/images/I/61PIHuuvcNL._AC_SX425_.jpg"
+    },
+    {
+      "id": 2,
+      "imagen": "https://images-na.ssl-images-amazon.com/images/I/61PIHuuvcNL._AC_SX425_.jpg"
+    },
+    {
+      "id": 3,
+      "imagen": "https://images-na.ssl-images-amazon.com/images/I/61PIHuuvcNL._AC_SX425_.jpg"
+    },
+    {
+      "id": 4,
+      "imagen": "https://images-na.ssl-images-amazon.com/images/I/61PIHuuvcNL._AC_SX425_.jpg"
+    },
+    {
+      "id": 5,
+      "imagen": "https://images-na.ssl-images-amazon.com/images/I/61PIHuuvcNL._AC_SX425_.jpg"
+    },
+    {
+      "id": 6,
+      "imagen": "https://images-na.ssl-images-amazon.com/images/I/61PIHuuvcNL._AC_SX425_.jpg"
+    },
+    {
+      "id": 7,
+      "imagen": "https://images-na.ssl-images-amazon.com/images/I/61PIHuuvcNL._AC_SX425_.jpg"
+    }
+  ],
+  "carrito": [
+    {
+      "id": "d6c10519-e574-4acb-b9bc-b3c7b3ec4ea6",
+      "nombre": "Pene largo y gigante",
+      "descripcion": "Te desgarra foerte",
+      "precio": 1500,
+      "imagen": "https://images-na.ssl-images-amazon.com/images/I/61PIHuuvcNL._AC_SX425_.jpg"
+    },
+    {
+      "id": "4cdb3600-6442-4813-b8c9-ae6a6734f1f1",
+      "nombre": "Pene largo y gigante",
+      "descripcion": "Te desgarra foerte",
+      "precio": 1500,
+      "imagen": "https://images-na.ssl-images-amazon.com/images/I/61PIHuuvcNL._AC_SX425_.jpg"
+    },
+    {
+      "id": "0ce6f396-b32b-4ed8-a151-71f0aedb2104",
+      "nombre": "Pene largo y gigante",
+      "descripcion": "Te desgarra foerte",
+      "precio": 1500,
+      "imagen": "https://images-na.ssl-images-amazon.com/images/I/61PIHuuvcNL._AC_SX425_.jpg"
+    },
+    {
+      "id": "d0eb4cb1-3f72-4a1d-8e9f-d9ae3a936e5d",
+      "nombre": "Pene largo y gigante",
+      "descripcion": "Te desgarra foerte",
+      "precio": 1500,
+      "imagen": "https://images-na.ssl-images-amazon.com/images/I/61PIHuuvcNL._AC_SX425_.jpg"
+    },
+    {
+      "id": "8247bb16-e5fc-4304-802e-da67ef17986d",
+      "nombre": "Pene largo y gigante",
+      "descripcion": "Te desgarra foerte",
+      "precio": 1500,
+      "imagen": "https://images-na.ssl-images-amazon.com/images/I/61PIHuuvcNL._AC_SX425_.jpg"
+    },
+    {
+      "id": "669db719-a77a-4201-96de-e8f36fa42ffc",
+      "nombre": "Pene largo y gigante",
+      "descripcion": "Te desgarra foerte",
+      "precio": 1500,
+      "imagen": "https://images-na.ssl-images-amazon.com/images/I/61PIHuuvcNL._AC_SX425_.jpg"
+    },
+    {
+      "id": "57370f4f-32da-4e57-b076-cb2d738f914d",
+      "nombre": "Pene largo y gigante",
+      "descripcion": "Te desgarra foerte",
+      "precio": 1500,
+      "imagen": "https://images-na.ssl-images-amazon.com/images/I/61PIHuuvcNL._AC_SX425_.jpg"
+    },
+    {
+      "id": "e410ba86-bec8-44d9-9a19-87e8d6518d4e",
+      "nombre": "Pene largo y gigante",
+      "descripcion": "Te desgarra foerte",
+      "precio": 1500,
+      "imagen": "https://images-na.ssl-images-amazon.com/images/I/61PIHuuvcNL._AC_SX425_.jpg"
+    },
+    {
+      "id": "d8b36e57-b196-4cd6-ad8b-bdeeb6eeb3da",
+      "nombre": "Pene largo y gigante",
+      "descripcion": "Te desgarra foerte",
+      "precio": 1500,
+      "imagen": "https://images-na.ssl-images-amazon.com/images/I/61PIHuuvcNL._AC_SX425_.jpg"
+    },
+    {
+      "id": "138c38e9-7467-44a3-bd0d-fb5b7b17f8a8",
+      "nombre": "Pene largo y gigante",
+      "descripcion": "Te desgarra foerte",
+      "precio": 1500,
+      "imagen": "https://images-na.ssl-images-amazon.com/images/I/61PIHuuvcNL._AC_SX425_.jpg"
+    },
+    {
+      "id": "55412375-6772-4290-b536-9e16745bc6e8",
+      "nombre": "Pene largo y gigante",
+      "descripcion": "Te desgarra foerte",
+      "precio": 1500,
+      "imagen": "https://images-na.ssl-images-amazon.com/images/I/61PIHuuvcNL._AC_SX425_.jpg"
+    }
+  ],
+  "Usuarios": [
+    {
+      "nombre": "Michelle",
+      "apellido": "Sambiase",
+      "dni": "38701327",
+      "direccion": "Emilio Mitre 736",
+      "localidad": "Ciudad de Buenos Aires",
+      "codigoPostal": "1424",
+      "telefono": "123123123",
+      "email": "michellesambiase@gmail.com",
+      "confirmarEmail": "michellesambiase@gmail.com",
+      "password": "minhayminho",
+      "confirmarPassword": "minhayminho",
+      "showPassword": false,
+      "id": 1
+    },
+    {
+      "nombre": "Michelle",
+      "apellido": "Sambiase",
+      "dni": "38701327",
+      "direccion": "Emilio Mitre 736",
+      "localidad": "Ciudad de Buenos Aires",
+      "codigoPostal": "1424",
+      "telefono": "123123123",
+      "email": "asd@test.com",
+      "confirmarEmail": "asd@test.com",
+      "password": "asdasd",
+      "confirmarPassword": "asdasd",
+      "showPassword": false,
+      "id": 2
+    },
+    {
+      "nombre": "Michelle",
+      "apellido": "Sambiase",
+      "dni": "",
+      "direccion": "Emilio Mitre",
+      "localidad": "Ciudad de Buenos Aires",
+      "codigoPostal": "1424",
+      "telefono": "",
+      "email": "qwe@test.com",
+      "confirmarEmail": "qwe@test.com",
+      "password": "qwe",
+      "confirmarPassword": "qwe",
+      "showPassword": false,
+      "id": 3
+    },
+    {
+      "nombre": "Michelle",
+      "apellido": "Sambiase",
+      "dni": "",
+      "direccion": "Emilio Mitre",
+      "localidad": "Ciudad de Buenos Aires",
+      "codigoPostal": "1424",
+      "telefono": "01167522700",
+      "email": "michellesambiase@gmail.com",
+      "confirmarEmail": "michellesambiase@gmail.com",
+      "password": "asdasd",
+      "confirmarPassword": "asdasd",
+      "showPassword": false,
+      "id": 4
+    }
+  ]
+}
