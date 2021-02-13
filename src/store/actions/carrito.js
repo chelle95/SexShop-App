@@ -1,3 +1,5 @@
+import { ApiGeneralGet, ApiGeneralPost } from "../../API/Api";
+
 //siempre que tengamos que hacer conexion con la base de datos pasamos por ACTIONS
 export const AGREGAR = "AGREGAR";
 export const SET_CARRITO = "SET_CARRITO";
@@ -5,7 +7,8 @@ export const ELIMINAR_CARRITO = "ELIMINAR_CARRITO";
 export const EFECTUAR_COMPRA = "EFECTUAR_COMPRA";
 
 export const agregarCarrito = (id, producto) => {
-  return async (dispatch) => {
+  return async (dispatch, getState) => {
+    const email = getState().login.email;
     const { nombre, descripcion, precio, imagen } = producto;
     const data = {
       id,
@@ -13,15 +16,10 @@ export const agregarCarrito = (id, producto) => {
       descripcion,
       precio,
       imagen,
+      email,
     };
     try {
-      const response = await fetch("http://localhost:3004/carrito", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
+      const response = await ApiGeneralPost(data, "/agregarCarrito");
       const resData = await response.json();
       dispatch({ type: AGREGAR, producto: resData });
     } catch (e) {
@@ -31,8 +29,9 @@ export const agregarCarrito = (id, producto) => {
 };
 
 export const setCarrito = () => {
-  return async (dispatch) => {
-    const response = await fetch("http://localhost:3004/carrito");
+  return async (dispatch, getState) => {
+    const email = getState().login.email;
+    const response = await ApiGeneralGet({ email }, "/setCarrito");
     //response.json extrae la informacion que nos sirve de response, la que necesitamos.
     const resData = await response.json();
     dispatch({
@@ -43,10 +42,9 @@ export const setCarrito = () => {
 };
 
 export const eliminarCarrito = (id) => {
-  return async (dispatch) => {
-    const response = await fetch(`http://localhost:3004/carrito/${id}`, {
-      method: `DELETE`,
-    });
+  return async (dispatch, getState) => {
+    const email = getState().login.email;
+    const response = ApiGeneralPost({ id, email }, "/eliminarCarrito");
     if (response.status === 200) {
       dispatch({ type: ELIMINAR_CARRITO, idProducto: id });
     }

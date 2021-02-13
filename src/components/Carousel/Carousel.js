@@ -6,7 +6,7 @@ import { autoPlay } from "react-swipeable-views-utils";
 import Pagination from "./Pagination";
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
-const Carousel = () => {
+const Carousel = (props) => {
   const handleChangeIndex = (index) => {
     setIndex(index);
   };
@@ -26,12 +26,12 @@ const Carousel = () => {
     },
 
     slideTres: {
-      backgroundImage:
-        "url(https://image.freepik.com/psd-gratis/retrato-perrito-lindo-golden-retriever-que-lleva-sombrero-papa-noel_53876-73990.jpg)",
-      backgroundRepeat: "no-repeat",
+      backgroundImage: `url(${props.imagenes})`,
+      backgroundSize: "cover",
+      WebkitBackgroundSize: "",
       maxHeight: "auto",
       width: "100%",
-      height: "500px",
+      height: "600px",
     },
   });
 

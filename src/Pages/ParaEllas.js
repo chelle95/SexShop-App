@@ -3,13 +3,14 @@ import CardVentas from "../components/Card/CardVentas";
 import DrawerFijo from "../components/Drawer/DrawerFijo";
 import { makeStyles } from "@material-ui/core/styles";
 import { Grid } from "@material-ui/core";
+import { ApiGeneralGet } from "../API/Api";
 
 const ParaEllas = () => {
   const [productosEllas, setProductosEllas] = useState([]);
 
   const fetchProductosEllas = async () => {
-    const response = await fetch("http://localhost:3004/productosParaEllas");
-    const resData = await response.json();
+    const response = await ApiGeneralGet({}, "/buscarProductos");
+    const resData = await response.data.response;
     setProductosEllas(await resData);
   };
 

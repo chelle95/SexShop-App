@@ -13,6 +13,7 @@ import Compras from "./Pages/Compras";
 import Registrarse from "./Pages/Registrarse";
 import MetodoDePago from "./Pages/MetodoDePago";
 import IniciarSesion from "./Pages/IniciarSesion";
+import Perfil from "./Pages/Perfil";
 
 import { CssBaseline } from "@material-ui/core";
 
@@ -54,6 +55,7 @@ function App() {
       <Route exact path="/Registrarse" component={Registrarse} />
       <Route exact path="/IniciarSesion" component={IniciarSesion} />
       <Route exact path="/MetodoDePago" component={MetodoDePago} />
+      <Route exact path="/Perfil" component={Perfil} />
     </div>
   );
 }

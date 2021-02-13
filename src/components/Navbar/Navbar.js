@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { withRouter } from "react-router-dom";
-import mortal from "../../images/mortal.png";
+import sexyLogo from "../../images/sexyLogo.png";
 
 import {
   AppBar,
@@ -25,7 +25,7 @@ const useStyles = makeStyles({
   root: {
     display: "flex",
     flexGrow: 1,
-    backgroundColor: "#ab3838",
+    backgroundColor: "#ffffff",
   },
   tooltipFont: {
     fontSize: "1rem",
@@ -36,14 +36,19 @@ const useStyles = makeStyles({
   button: {
     display: "flex",
   },
-  dragon: {
-    width: "40px",
-    height: "40px",
+  sexyLogo: {
+    width: "50px",
+    height: "50px",
+    boxSizing: "border-box",
+    borderRadius: "140px 140px 140px 12px",
   },
   tabsHolder: {
     width: "100%",
     justifyContent: "center",
     display: "flex",
+  },
+  tabs: {
+    color: "#30475e",
   },
   //MuiTabsRoot: {},
 });
@@ -90,10 +95,6 @@ function Navbar(props) {
         break;
       case 2:
         props.history.push("/Contacto");
-        setTabValue(value);
-        break;
-      case 3:
-        props.history.push("/Lenceria");
         setTabValue(value);
         break;
       default:
@@ -144,7 +145,14 @@ function Navbar(props) {
 
   const menuLogueado = () => (
     <>
-      <MenuItem>Perfil</MenuItem>
+      <MenuItem
+        onClick={() => {
+          handleClose();
+          props.history.push("/Perfil");
+        }}
+      >
+        Perfil
+      </MenuItem>
       <MenuItem>Configuracion</MenuItem>
       <MenuItem onClick={salir}>Salir</MenuItem>
     </>
@@ -160,8 +168,8 @@ function Navbar(props) {
             </IconButton>
             <IconButton>
               <img
-                src={mortal}
-                className={classes.dragon}
+                src={sexyLogo}
+                className={classes.sexyLogo}
                 onClick={() => {
                   props.history.push("/");
                 }}
@@ -176,7 +184,6 @@ function Navbar(props) {
                 <Tab label="Productos" />
                 <Tab label="Envios" />
                 <Tab label="Contacto" />
-                <Tab label="Lenceria" />
               </Tabs>
             </div>
 
