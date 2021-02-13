@@ -44,6 +44,7 @@ const Carousel = (props) => {
           <div className={(classes.slide, classes.slideTres)}>slide n°1</div>
           <div className={(classes.slide, classes.slideTres)}>slide n°2</div>
           <div className={(classes.slide, classes.slideTres)}>slide n°3</div>
+          <div className={(classes.slide, classes.slideTres)}>slide n°4</div>
         </AutoPlaySwipeableViews>
       </Grid>
 
